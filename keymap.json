@@ -66,7 +66,6 @@
       "ctrl-v": "editor::Paste",
       "shift-u": "editor::Redo",
       "d": "vim::DeleteRight",
-      "x": "vim::ToggleVisualLine",
       "%": "editor::SelectAll"
     }
   },
@@ -82,12 +81,14 @@
       // put key-bindings here if you want them to work only in normal mode
       "down": ["workspace::SendKeystrokes", "4 j"],
       "up": ["workspace::SendKeystrokes", "4 k"]
+      "x": "vim::ToggleVisualLine"
     }
   },
   {
     "context": "Editor && vim_mode == visual && !VimWaiting && !menu",
     "bindings": {
       // visual, visual line & visual block modes
+      "x": ["workspace::SendKeystrokes", "j"]
     }
   },
   {
