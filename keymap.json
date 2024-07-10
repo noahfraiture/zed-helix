@@ -57,8 +57,6 @@
       "m i w": ["workspace::SendKeystrokes", "v i w"],
 
       // Misc
-      // "shift-k": "editor::MoveLineUp",
-      // "shift-j": "editor::MoveLineDown",
       "ctrl-k": "editor::MoveLineUp",
       "ctrl-j": "editor::MoveLineDown",
 
@@ -93,9 +91,8 @@
   },
   {
     "context": "Editor && vim_mode == insert && !menu",
-    // put key-bindings here if you want them to work in insert mode
     "bindings": {
-      "j k": ["vim::SwitchMode", "Normal"]
+      // put key-bindings here if you want them to work in insert mode
     }
   },
   {
@@ -106,12 +103,6 @@
       "ctrl-w l": ["workspace::ActivatePaneInDirection", "Right"],
       "ctrl-w k": ["workspace::ActivatePaneInDirection", "Up"],
       "ctrl-w j": ["workspace::ActivatePaneInDirection", "Down"]
-    }
-  },
-  {
-    "context": "ConversationEditor > Editor",
-    "bindings": {
-      "shift-ctrl-alt-cmd-enter": "assistant::Assist"
     }
   }
 ]
