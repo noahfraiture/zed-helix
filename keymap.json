@@ -11,10 +11,13 @@
   {
     "context": "Editor && VimControl && !VimWaiting && !menu",
     "bindings": {
+      // Motion
+      "ctrl-shift-alt-w": "vim::NextWordStart",
+      "ctrl-shift-alt-b": "vim::PreviousWordStart",
+      "ctrl-shift-alt-e": "vim::NextWordEnd",
       // Goto mode
       "g n": "pane::ActivateNextItem",
       "g p": "pane::ActivatePrevItem",
-
       // "tab": "pane::ActivateNextItem",
       // "shift-tab": "pane::ActivatePrevItem",
       "H": "pane::ActivatePrevItem",
@@ -28,7 +31,6 @@
       "g t": "vim::WindowTop",
       "g c": "vim::WindowMiddle",
       "g b": "vim::WindowBottom",
-
       // Window mode
       "space w h": ["workspace::ActivatePaneInDirection", "Left"],
       "space w l": ["workspace::ActivatePaneInDirection", "Right"],
@@ -40,7 +42,6 @@
       "space w r": "pane::SplitRight",
       "space w v": "pane::SplitDown",
       "space w d": "pane::SplitDown",
-
       // Space mode
       "space f": "file_finder::Toggle",
       "space k": "editor::Hover",
@@ -51,18 +52,13 @@
       "space r": "editor::Rename",
       "space a": "editor::ToggleCodeActions",
       "space h": "editor::SelectAllMatches",
-
       // Match mode
       "m m": "vim::Matching",
       "m i w": ["workspace::SendKeystrokes", "v i w"],
-
       // Misc
       "ctrl-k": "editor::MoveLineUp",
       "ctrl-j": "editor::MoveLineDown",
-
       "n": "vim::PreviousWordStart",
-      "b": ["workspace::SendKeystrokes", "v n"],
-      "w": ["workspace::SendKeystrokes", "v e"],
       "ctrl-v": "editor::Paste",
       "shift-u": "editor::Redo",
       "d": "vim::DeleteRight",
@@ -79,8 +75,9 @@
     "context": "Editor && vim_mode == normal && !VimWaiting && !menu",
     "bindings": {
       // put key-bindings here if you want them to work only in normal mode
-      "down": ["workspace::SendKeystrokes", "4 j"],
-      "up": ["workspace::SendKeystrokes", "4 k"]
+      "b": ["workspace::SendKeystrokes", "v ctrl-shift-alt-b"],
+      "w": ["workspace::SendKeystrokes", "v ctrl-shift-alt-w"],
+      "e": ["workspace::SendKeystrokes", "v ctrl-shift-alt-e"],
       "x": "vim::ToggleVisualLine"
     }
   },
@@ -88,6 +85,9 @@
     "context": "Editor && vim_mode == visual && !VimWaiting && !menu",
     "bindings": {
       // visual, visual line & visual block modes
+      "b": ["workspace::SendKeystrokes", "v v ctrl-shift-alt-b"],
+      "w": ["workspace::SendKeystrokes", "v v ctrl-shift-alt-w"],
+      "e": ["workspace::SendKeystrokes", "v v ctrl-shift-alt-e"],
       "x": ["workspace::SendKeystrokes", "j"]
     }
   },
