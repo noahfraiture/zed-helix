@@ -36,7 +36,6 @@
       "space w l": ["workspace::ActivatePaneInDirection", "Right"],
       "space w k": ["workspace::ActivatePaneInDirection", "Up"],
       "space w j": ["workspace::ActivatePaneInDirection", "Down"],
-      "space c": "pane::CloseActiveItem",
       "space w q": "pane::CloseActiveItem",
       "space w s": "pane::SplitRight",
       "space w r": "pane::SplitRight",
@@ -66,13 +65,13 @@
     }
   },
   {
-    "context": "Editor && (vim_mode == normal || vim_mode == visual) && !VimWaiting && !menu",
+    "context": "Editor && VimControl && (vim_mode == normal || vim_mode == visual) && !VimWaiting && !menu",
     "bindings": {
       // put key-bindings here if you want them to work in normal & visual mode
     }
   },
   {
-    "context": "Editor && vim_mode == normal && !VimWaiting && !menu",
+    "context": "Editor && VimControl && vim_mode == normal && !VimWaiting && !menu",
     "bindings": {
       // put key-bindings here if you want them to work only in normal mode
       "b": ["workspace::SendKeystrokes", "v ctrl-shift-alt-b"],
@@ -82,7 +81,7 @@
     }
   },
   {
-    "context": "Editor && vim_mode == visual && !VimWaiting && !menu",
+    "context": "Editor && VimControl && vim_mode == visual && !VimWaiting && !menu",
     "bindings": {
       // visual, visual line & visual block modes
       "b": ["workspace::SendKeystrokes", "v v ctrl-shift-alt-b"],
@@ -92,7 +91,7 @@
     }
   },
   {
-    "context": "Editor && vim_mode == insert && !menu",
+    "context": "Editor && VimControl && vim_mode == insert && !menu",
     "bindings": {
       // put key-bindings here if you want them to work in insert mode
     }
