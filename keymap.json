@@ -52,6 +52,7 @@
       "space r": "editor::Rename",
       "space a": "editor::ToggleCodeActions",
       "space h": "editor::SelectAllMatches",
+      "space c": "editor::ToggleComments",
       // Match mode
       "m m": "vim::Matching",
       "m i w": ["workspace::SendKeystrokes", "v i w"],
@@ -78,7 +79,8 @@
       "b": ["workspace::SendKeystrokes", "v ctrl-shift-alt-b"],
       "w": ["workspace::SendKeystrokes", "v ctrl-shift-alt-w"],
       "e": ["workspace::SendKeystrokes", "v ctrl-shift-alt-e"],
-      "x": "vim::ToggleVisualLine"
+      "x": "vim::ToggleVisualLine",
+      "ctrl-c": "editor::ToggleComments"
     }
   },
   {
