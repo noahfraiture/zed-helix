@@ -51,6 +51,7 @@
       "space r": "editor::Rename",
       "space a": "editor::ToggleCodeActions",
       "space h": "editor::SelectAllMatches",
+      "space c": "editor::ToggleComments",
       // Match mode
       "m m": "vim::Matching",
       "m i w": ["workspace::SendKeystrokes", "v i w"],
@@ -61,7 +62,8 @@
       "ctrl-v": "editor::Paste",
       "shift-u": "editor::Redo",
       "d": "vim::DeleteRight",
-      "%": "editor::SelectAll"
+      "%": "editor::SelectAll",
+      "ctrl-c": "editor::ToggleComments"
     }
   },
   {
